@@ -15,6 +15,12 @@ namespace PdfImageTranslator;
 
 class Program
 {
+    // Configuration constants
+    private const int MinTextLengthThreshold = 50;
+    private const int JpegQuality = 85;
+    private const int MaxTokens = 4096;
+    private const string OcrPrompt = "請將此圖片中的所有文字完整且準確地轉錄成文字。請逐字轉錄，保持原有的格式和段落結構。";
+
     static async Task<int> Main(string[] args)
     {
         Console.WriteLine("PDF to Text Converter with OCR Support");
@@ -102,7 +108,7 @@ class Program
                 string pageText = page.Text.Trim();
 
                 // Check if page has extractable text
-                if (!string.IsNullOrWhiteSpace(pageText) && pageText.Length > 50)
+                if (!string.IsNullOrWhiteSpace(pageText) && pageText.Length > MinTextLengthThreshold)
                 {
                     // Page has text layer, extract directly
                     result.AppendLine($"--- Page {i} ---");
@@ -159,7 +165,7 @@ class Program
         
         // Convert SkiaSharp bitmap to base64
         using var image = SKImage.FromBitmap(pageImage);
-        using var data = image.Encode(SKEncodedImageFormat.Jpeg, 85);
+        using var data = image.Encode(SKEncodedImageFormat.Jpeg, JpegQuality);
         byte[] imageBytes = data.ToArray();
         string base64Image = Convert.ToBase64String(imageBytes);
 
@@ -170,14 +176,14 @@ class Program
         var messages = new ChatMessage[]
         {
             new UserChatMessage(
-                ChatMessageContentPart.CreateTextPart("請將此圖片中的所有文字完整且準確地轉錄成文字。請逐字轉錄，保持原有的格式和段落結構。"),
+                ChatMessageContentPart.CreateTextPart(OcrPrompt),
                 ChatMessageContentPart.CreateImagePart(new Uri($"data:image/jpeg;base64,{base64Image}"))
             )
         };
 
         var completionOptions = new ChatCompletionOptions
         {
-            MaxOutputTokenCount = 4096,
+            MaxOutputTokenCount = MaxTokens,
             Temperature = 0.0f
         };
 
