@@ -23,7 +23,7 @@ public class PdfRasterizer : IDisposable
     // Scale factor for rendering: 4.0 gives ~288 DPI (close to 300 DPI target)
     // This is calculated as: targetDPI / baseDPI = 300 / 72 ≈ 4.17
     // We use 4.0 for a round number that's close enough
-    private const int ScaleFactor = 4;
+    private const double ScaleFactor = 4.0;
 
     public PdfRasterizer(string pdfPath)
     {
