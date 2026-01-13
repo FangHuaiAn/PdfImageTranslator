@@ -1,0 +1,1184 @@
+--- Page 1 ---
+JCSS
+jaffee center for strategic studies
+
+Eliot A. Cohen
+
+Net Assessment:
+An American Approach
+
+JCSS Memorandum no. 29 - April 1990
+
+JCSS TELAVIV UNIVE
+
+
+--- Page 2 ---
+Net Assessment: An American Approach
+
+Dr. Eliot A. Cohen
+Lynde and Harry Bradley Senior Research Associate
+John M. Olin Institute for Strategic Studies
+Harvard University Center for International Affairs
+
+Copyright 1990 Eliot A. Cohen
+
+
+--- Page 3 ---
+Introductory Notes
+
+The following paper is based on a lecture presented at the
+Jaffee Center for Strategic Studies on August 17, 1989. At that
+time the author was a Visiting Fellow at the Center, as well as
+the Bradley Senior Research Associate at Harvard's Olin Institute
+for Strategic Studies.
+
+Mr. Andrew W. Marshall is the pioneer of American net
+assessment, and the author's debt to him is very great. However,
+the views expressed herein are the views of the author only, and
+not necessarily those of any other individual or governmental
+organization, including the Office of Net Assessment/Office of
+the Secretary of Defense.
+
+In what follows, "net assessment" and "net assessors" refer
+to ideal types, and not necessarily to current American practice.
+
+2
+
+
+--- Page 4 ---
+Introductory Notes
+
+The following paper is based on a lecture presented at the
+Jaffee Center for Strategic Studies on August 17, 1989. At that
+time the author was a Visiting Fellow at the Center, as well as
+the Bradley Senior Research Associate at Harvard's Olin Institute
+for Strategic Studies.
+
+Mr. Andrew W. Marshall is the pioneer of American net
+assessment, and the author's debt to him is very great. However,
+the views expressed herein are the views of the author only, and
+not necessarily those of any other individual or governmental
+organization, including the Office of Net Assessment/Office of
+the Secretary of Defense.
+
+In what follows, "net assessment" and "net assessors" refer
+to ideal types, and not necessarily to current American practice.
+
+2
+
+
+--- Page 5 ---
+Contents
+
+Page no.
+Introductory Notes
+2
+What is Net Assessment?
+4
+Net Assessment versus "The Estimate of the Situation"
+7
+Net Assessment versus Systems Analysis
+
+Methodology
+9
+Attitudes to Numbers
+10
+Frame of Reference
+11
+The Central Question
+11
+
+A Net Assessment Template
+
+How should we think about the balance?
+13
+Trends
+14
+Concepts of Operation
+15
+Asymmetries
+17
+Scenarios
+18
+Practical Problems of Net Assessment
+
+Data
+20
+Supporting Studies
+21
+The Organizational Design and Bureaucratic Politics
+of Net Assessment
+21
+Future of Net Assessment
+23
+Notes
+24
+
+
+--- Page 6 ---
+Contents
+
+Page no.
+Introductory Notes
+2
+What is Net Assessment?
+4
+Net Assessment versus "The Estimate of the Situation"
+7
+Net Assessment versus Systems Analysis
+
+Methodology
+9
+Attitudes to Numbers
+10
+Frame of Reference
+11
+The Central Question
+11
+
+A Net Assessment Template
+
+How should we think about the balance?
+13
+Trends
+14
+Concepts of Operation
+15
+Asymmetries
+17
+Scenarios
+18
+
+Practical Problems of Net Assessment
+
+Data
+20
+Supporting Studies
+21
+The Organizational Design and Bureaucratic Politics
+of Net Assessment
+21
+Future of Net Assessment
+23
+Notes
+24
+
+
+--- Page 7 ---
+Here is the transcription of the text from the image:
+
+What is Net Assessment?
+
+What follows represents only one line of thinking about net
+assessment, which we may define as "the craft and discipline of
+analyzing military balances." From the first part of this
+definition an important characteristic of this approach becomes
+clear: net assessment, in this view, is not a science or anything
+close to it. Although net assessment may draw on various forms
+of quantitative analysis, it makes no pretense to the certainty
+(such as it is) of operations research, much less the hard
+sciences. Many do not share this view, and think that not only
+is scientific rigor, of the kind associated, let us say, with
+molecular biology, possible in this field, but that scientific
+progress characterizes it as well. My view is more pessimistic:
+a storehouse of wisdom about doing net assessments has been built
+up in the Office of Net Assessment (ONA) in the Office of the
+Secretary of Defense, and many statesmen and generals have, in
+the past, made superb net assessments. But there is no guarantee
+that accumulated good sense will survive in any bureaucracy, and
+individual genius appears and flourishes as it wills. What is
+worse, many of the approaches to net assessment that dominate
+contemporary academe, and to a lesser extent the public and
+contract research worlds are, in fact, profoundly destructive of
+sound net assessment.
+
+Net assessment is the appraisal of military balances. It
+goes on all the time in the minds of decisionmakers and their
+staffs. Their implicit beliefs--no matter how inarticulate,
+sketchy, inconsistent, or fantastic--about how well they will do
+against a given enemy constitute a form of net assessment. But
+this paper will deal with explicit, policy-oriented net
+assessment. Historians, who have much to contribute to this
+field, do a different kind of net assessment: they want to
+understand a military balance simply because they want to
+understand it, or to relate it to some other intellectual
+problem. Strategic net assessment, that is the weighing of
+politico-military balances, on the other hand, has this purpose,
+but another as well--the raising of problems to the attention of
+senior decisionmakers, such as the Secretary of Defense or the
+National Security Council. Strategic net assessment is the most
+highly aggregated form of the discipline and incorporates the
+many other kinds, which are of almost infinite variety.
+Comparisons of weapons systems, leadership styles, operational
+capabilities in a specific campaign, general technological
+development, and SO forth, all feed into strategic net
+assessments.
+
+Analysts doing strategic net assessment seek first to
+describe the nature of political-military competition in various
+
+4
+
+
+--- Page 8 ---
+geographical and functional areas, under both peace and wartime
+conditions. Secondly, they wish to discover or highlight issues
+that may not require urgent action, but which do demand the
+attention of the most senior government officials in the national
+security arena. For those purposes an Office of Net Assessment
+has functioned in the Office of the Secretary of Defense since
+the early 1970s; since its beginnings it has been under the
+directorship of Andrew Marshall.
+Marshall, a former senior RAND
+analyst who has worked since the mid-1950s for the United States
+government on some of the most sensitive intelligence and
+strategic issues facing it, is the father of American net
+assessment, at least of the kind described and advocated in this
+paper.¹
+
+By virtue of his abilities, his personality, and the length
+of his tenure in office, Marshall has had a profound impact on at
+least two generations of military officers, civil servants,
+scholars, and professional researchers. But in addition to the
+influence of a uniquely important personality, one should note as
+well larger environmental factors which have molded this style.
+For the last 40 years the United States has been locked in a
+long-term strategic competition with the Soviet Union.
+Economically, the Soviet Union has had little chance of matching
+the United States and, moreover, has had relatively little
+interaction with it. By the 1960s Soviet communism--though not
+related strains such as Maoism and Castroism--posed little
+ideological threat to the United States, although Marxism-
+Leninism formed the Soviet world view and pervaded all
+institutions of the Soviet state. For the most part, then, the
+superpowers struggled on the strategic, i.e. politico-military
+plane. They rarely confronted each other militarily, and then
+almost never violently, but they fought proxy wars against each
+other, created the world's largest and most durable alliance
+systems, and built vast military machines suitable for
+conventional or nuclear war, and at a variety of levels of
+intensity. American net assessors, therefore, have faced the
+task of analyzing forces ranged across the globe appraising the
+US-Soviet balance under two conditions: peacetime competition and
+potential war, each of which in turn could take a variety of
+forms. Clearly the calculations involved were complex. On the
+other hand, the United States had the advantage of dealing with a
+single opponent, whose fundamental beliefs were well-known and
+who placed great weight on formal statements of doctrine. The
+bureaucratization of the Soviet Union also made it, in some
+measure, a predictable opponent.
+
+The structure of American government and society also
+facilitated a distinctive approach to net assessment. For all
+the undeniable cumbersomeness and diffusion of power within the
+American political system, certain favorable circumstances
+facilitated official net assessment of the kind discussed here.
+Unlike smaller countries--Israel might be an example--the United
+5
+
+
+--- Page 9 ---
+States could afford the human and fiscal resources to invest in
+an activity that produced no immediate answers to pressing policy
+problems. Not only can the United States staff an organization
+like ONA, but it can easily afford the funds for specialized
+external research in support of its efforts, and American society
+has vast pools of expertise of almost every imaginable kind. The
+absence of a single dominant intellectual style in the United
+States similarly fed the spirit of eclectic inquiry necessary for
+net assessment as described herein.
+
+6
+
+
+--- Page 10 ---
+Net Assessment versus "The Estimate of
+the Situation"
+
+Strategic net assessment differs from other kinds of
+assessments. It is distinct from the traditional "Commander's
+Estimate of the Situation," which is taught to American staff
+officers at different ranks. The Estimate of the Situation (or
+Commander's Estimate) is designed to provide officers with a
+structured means of thinking through a tactical or an operational
+situation; as such it merely codifies common sense orderliness.
+Composed of five sections, it comprises:
+
+1. The mission (or the problem)
+
+2. The situation and course of action, which includes
+analysis of geography and weather, as well as the
+friendly and enemy situations
+
+3. Analysis of various possible enemy courses of action
+
+4. Comparison of the merits and defects of one's own
+courses of action
+
+5. Decision
+
+A sophisticated and thorough version can be found in a classic of
+early twentieth century American military thought, Sound Military
+Decision (Newport, Rhode Island: U.S. Naval War College, 1942).
+
+Estimates of the situation can be done with greater or
+lesser rigor, and some of the most extensive efforts--for
+example, the estimate of the situation done by the US Joint Board
+with respect to Japan in 1929--have been models of thoroughness.
+But the estimate of the situation, valuable though it may be for
+campaign planning, has three drawbacks from the point of view of
+net assessment. First, it tends to be formulaic. The
+commander's estimate, like the "principles of war," is taught to
+officers of varying quality, and at varying levels of command;
+its purpose is not to cultivate insight but to make sure that
+officers make decisions in an orderly fashion. For that purpose,
+a fixed structure is helpful. Strategic net assessments,
+however, must retain extreme flexibility of format, for the
+structure of a study must often be determined by the substance of
+the issues at stake. Elaborate checklists for strategic analysis
+may buy comprehensiveness, but they do so at the expense of both
+rigidity and, what is worse, a sense of premature closure on
+important issues. Particularly at the higher levels of politico-
+
+7
+
+
+--- Page 11 ---
+military competition, where intangible considerations weigh
+heavily, a looser structure of analysis is required.
+
+A second drawback of the estimate of the situation lies in
+its focus on an immediate military effort, in the form of a
+battle or a campaign. In contrast strategic net assessment looks
+at a competition, a struggle that may have no clearly defined
+beginning or terminus. Finally, the estimate of the situation
+focuses on the here and now. Even the 1929 Joint Board study
+referred to above looked at conditions and considered forces no
+more than two years in either direction from the date of the
+study. It is a premise of net assessment, however, that far
+longer time horizons, looking both backward and forward, are
+necessary.
+
+8
+
+
+--- Page 12 ---
+Net Assessment versus Systems Analysis
+
+Another alternative to net assessment is systems analysis, a
+methodology which reached the peak of its bureaucratic power in
+the early 1960s when Robert McNamara was America's secretary of
+defense.2 It is a mode of thought--a school of strategic
+analysis--in its own right, and it continues to exert a powerful
+influence over both the academic and the bureaucratic communities
+of analysts. Indeed, the Office of Program Analysis and
+Evaluation in the Pentagon, now headed by an Assistant Secretary
+of Defense, represents the institutionalization of this mode of
+analysis. Systems analysis draws on economics and the skills of
+operations research (which is considerably more technical and
+focused) to answer the needs of decisionmakers about questions of
+military sufficiency and force structure design.
+
+To understand the differences between systems analysis and
+strategic net assessment we should understand four critical
+differences between them.
+
+Methodology
+
+Systems analysts tend to focus on a single preferred
+approach to setting up a problem. To be sure, analysts often
+have different pet models or measures of effectiveness, but it is
+extremely rare to find an individual analyst using several
+methodologies. Rather, systems analysts attempt to find the key
+method or formula for understanding military balances. For the
+most part, they turn to firepower-scoring systems as ways of
+making opposing forces comparable to one another. Strategic net
+assessment, by way of contrast, is resolutely eclectic. A wise
+net assessor will use many methods--including those of systems
+analysis, to be sure, but also war gaming, historical analogy
+making, and traditional forms of reasoning, such as that embodied
+in the great state papers of Winston Churchill as he surveyed the
+world scene in December 1942.3
+
+Systems analysis, like much of modern social science, relies
+heavily on deduction. That is, it seeks to discover the truth by
+reasoning from first principles, and generating short, axiomatic,
+and abstract propositions which it then tests (sometimes) against
+external reality. Strategic net assessment is more inductive--an
+approach in bad odor with some contemporary philosophers of
+science, but which has more to be said for it in this field.4
+In practice, most scientists interested in discovery rather than
+methodology mix induction and deduction, and think rather little
+of it.
+Another way of putting it is that strategic net
+assessment is highly empirical and fact-oriented. Those who
+9
+
+
+--- Page 13 ---
+practice it do not search for the best theory, preferring instead
+to probe the contours of reality, scanning the data for anomalies
+and trends, continuities and oddities. Those who do net
+assessment best are more likely to have the skills of the
+investigative journalist, the historian, or the old-fashioned
+general practitioner, than those of the theoretical physicist,
+the game theorist, or the student of modern philosophy.
+
+Systems analysis makes claims to scientific method and
+rigor, and ultimately to something approaching scientific
+knowledge about military matters. Strategic net assessment, more
+modestly, hopes to get a handle on pieces of large, infinitely
+complicated, and interconnected problems. Ironically, its
+practitioners may be closer to modern science--to the concepts
+underlying the mathematics of "chaos," for instance--than the
+systems analysts who appear to believe in Newtonian
+certainties.5
+
+Attitudes to Numbers
+
+Systems analysis rests heavily on quantitative analyses of
+military balances, in part because this seems "scientific." To be
+sure, analysts usually begin their studies by acknowledging the
+importance of intangibles--particularly political calculations
+and what is sometimes called "military judgment." On occasion
+they may even list some of the key non-quantifiable issues
+involved in a particular estimate. In practice, however, they
+then ignore these issues, letting their analyses rest on
+unexamined assumptions (with respect to coalition warfare, for
+example). Strategic net assessment, by way of contrast, though
+it studies various quantitative aspects of military balances,
+understands that first order questions must be tackled, even if
+the range of answers appears vague or indefinite. One may
+illustrate the difference as follows: In the past, for most
+systems analysts, the questions of how a NATO/Warsaw Pact war in
+Europe might start was of importance chiefly because of the
+differential mobilization rates implied. Thus, the range of
+issues they investigated concerned merely the lag time between
+the mobilization of the two blocs, and how many days after
+mobilization a war broke out. A sound strategic net assessment,
+however, would treat in extenso the question of why war might
+break out as a fundamental problem, for this could shape the
+nature of the ensuing conflict. It would, for example, explore
+the likely coalitional solidity of the two sides under different
+scenarios. And this exploration of intangibles is, as we shall
+see, merely a beginning.
+
+10
+
+
+--- Page 14 ---
+Frame of Reference
+
+Most systems analysts, following what they take to be
+scientific method, believe in the necessity and desirability of
+simplification. Hence, they tend to confine their analyses to
+possible campaigns waged in clearly defined areas of the world.
+The method, therefore, is analytic in the strict sense, that is,
+it seeks understanding by breaking something into its component
+parts. In theory, at any rate, if one were to add up a set of
+systems analysis campaign studies one would have a picture of
+war. Net assessors, by way of contrast, are uncomfortably aware
+of the essential arbitrariness of most geographical and other
+boundaries used for such studies (e.g., those that look at the
+NATO/Warsaw Pact balance on the inter-German border alone,
+without looking as well at Austria and Denmark). Some arbitrary
+assumptions of this kind are necessary, but they must always come
+under scrutiny. Net assessors remind themselves that any
+particular study is only a piece of a larger conflict, be it war
+or peacetime competition. In Clausewitz's words, in war "more
+than elsewhere the part and the whole must always be thought of
+together."6
+The Central Question
+
+One sees the root of the differences between systems
+analysis and net assessment when one looks at the core question
+at the heart of the two approaches to weighing military balance.
+Systems analysis asks, "How much is enough?" which Alain Enthoven
+and K. Wayne Smith appropriately chose as the title for their
+book on the subject. This implies (1) that we can know, with
+fair precision, how much military force is indeed required in any
+situation. This implies that we can measure military power
+relatively easily and, again, precisely (2) that we can turn to
+analysis for focused answers to immediate policy questions. The
+second point illustrates a possible corruption of systems
+analysis, which the more careful practitioners of the discipline
+understand well: a relentless focus on getting "the answer" to a
+particular problem may corrode the integrity of the analysis.
+Systems analysts seek to influence day-to-day decisionmaking. As
+a result, they put a premium on definite conclusions, in a
+business where certainty is intrinsically elusive, and one's
+political beliefs and career incentives can skew one's judgment.
+Net assessors are not intrinsically more decent people, but they
+do ask more open-ended questions: "What is the nature of our
+current competition? If war broke out tomorrow, what might it
+look like? What issues should policymakers consider as they look
+five or ten years ahead?" As a result, they have fewer
+incentives to wrap themselves in a cloak of scientific certainty.
+These criticisms of the estimate of the situation and of
+systems analysis certainly do not mean that either approach is
+11
+
+
+--- Page 15 ---
+valueless. Far from it. Net assessment, however, is something
+different, although it draws on the best elements of the methods
+of both--the comprehensive inventory-taking of the estimate of
+the situation, for example, and the thoughtful search for
+measures of effectiveness characteristic of good systems
+analysis. It should be noted, however, that the three different
+approaches are likely to appeal to different kinds of
+personalities, and work best in different analytical settings.
+We will return to this issue at the end of this paper.
+
+12
+
+
+--- Page 16 ---
+A Net Assessment Template
+8
+It appears that the Soviets believe in the possibility of a
+single, comprehensive net assessment.7 Such a wildly optimistic
+view has its roots in Marxist-Leninist claims to understand
+society scientifically, and at a time when such claims have shown
+themselves almost comically hollow one may doubt them. A more
+reasonable path is that taken in the recent annual report of the
+Secretary of Defense, which lists two broad kinds of net
+assessments. One kind is chiefly geographical: it looks at,
+for example, the balance in East Asia, Central Europe, Central
+America, and in space. The other is functional: it includes
+studies of the maritime, central nuclear, and power-projection
+balances. Of course this does not exhaust the list of possible
+balance assessments. The balances noted here overlap, and this
+should be considered a strength, not an indication of analytical
+sloppiness. Forces have more than one use, military competition
+in peace and war takes place on different planes and at different
+times, and the totality of the US-Soviet competition is so great
+that some duplication of study is not a vice, but a cardinal
+virtue.
+
+While each of these possible balances must be done in its
+own way, five key questions or concepts occur in virtually all:
+
+How should we think about the balance?
+
+This, obviously, is the first and most important of all
+questions, to which the answers are rarely evident. This section
+of a balance study deals with a range of issues, including such
+mundane matters as the physical limits of the area studied, which
+may not necessarily coincide with conventional demarcations (for
+example, one might study a NATO/Warsaw Pact confrontation with
+reference to Swedish and Swiss participation, or overlooking some
+of the conventional command boundaries between AFNORTH and
+AFCENT). Two particular subsets of issues emerge in this
+section. First, what are the politics of the area or subject
+under consideration? What objectives do the two (or more, if
+there are more) sides have? What constraints born of domestic
+politics shape their capabilities and preferred strategies?
+
+Secondly, one must ask which standards of comparison--
+"measures of effectiveness," to use the language of operations
+research--are the most important. A thoughtful discussion of
+which measures to focus on can be almost as useful to a net
+assessment as the ensuing analysis that then applies them. Net
+assessment differs from systems analysis, in part, because it
+requires extensive consideration of measures of effectiveness,
+
+13
+
+
+--- Page 17 ---
+and frequently the use of several such measures side by side.
+For example, in comparing the US-Soviet military competition in
+space one might look not only at the sophistication of the
+respective countries' satellites, but at the launcher throwweight
+they possess, the vulnerability of their launch facilities to
+various kinds of disruption, and their flexibility in times of
+crisis and war. Above all, one would seek to measure the
+relative effectiveness of the two sides' space systems not only
+with respect to uniform engineering or tactical criteria, but
+with respect to operational styles and strategic requirements as
+well. When comparing the US and Soviet navies, for example, side
+by side comparison of individual ships or even of fleets means
+very little without an understanding of what governments desire
+those navies to do in wartime.
+
+Trends
+
+Net assessment looks at long-term trends. In particular, it
+studies patterns of behavior that go back twenty years, and
+sometimes more, and it attempts to look ahead five or ten years.
+This is a particularly distinctive feature of American net
+assessment, and an extremely important one first, because it
+gives decisionmakers a sense of the long-term directions and
+impulses which are often submerged in the hurly burly of day-to-
+day office routine. When assessors get such fundamental facts
+wrong they set themselves up for serious mistakes. Thus, in the
+1930s British intelligence agencies first underestimated, than
+overestimated the magnitude and pace of the German buildup.
+Consequently they induced first complacency, and then excessive
+alarm among the Cabinet and the Chiefs of Staff.
+
+Secondly, long-term trend analysis enables one to capture an
+extremely important concept: the growth of military stock. If
+one country outspends another in key areas by only a slight
+margin, the cumulative consequences can nonetheless be
+tremendous. In the case of the United States and the Soviet
+Union, it became apparent to some in the early 1980s that even
+large US defense budgets could not compensate within a couple of
+years for the steady edge in Soviet military investment that had
+built up over the preceding decade and a half. The conclusion to
+be drawn was that it made more sense to invest in weapons systems
+and tactical and operational approaches that had high leverage--
+i.e., "competitive strategies" that would render obsolete large
+portions of the Soviet arsenal, or which would impose
+disproportionate costs on the Soviets in the forms of
+countermeasures of various kinds.
+
+14
+
+
+--- Page 18 ---
+Concepts of Operation
+
+Different armies fight differently; indeed, even within one
+country military organizations may take radically different
+approaches to battle (this is true, for instance, of the United
+States Army and Marine Corps). Yet this simple fact has rarely
+worked its way into large scale comparative assessments of
+fighting forces. Net assessment requires thorough understanding
+of an opponent's style of warfare, and an effort to see how it
+interacts with one's own. In order to get beyond mere "bean
+counting"--the tallying up of numbers of tanks, aircraft, and
+artillery pieces--it is necessary to understand how each side
+characteristically operates its forces, and then to speculate as
+intelligently as possible about the significance of those facts.
+
+The obstacles to work of this kind are considerable. After
+the Spanish Civil War, for example, French intelligence noticed
+that the Wehrmacht had begun to invest in heavy tanks and large
+quantities of antitank guns. The French read this to indicate
+that the Germans had come around to their views about the role of
+the tank in modern warfare, namely, that it could most usefully
+serve as a supporting arm to the infantry, but that it could not
+be the centerpiece of modern tactics. This was, of course,
+hardly the case. A similar case is that of the US Navy as it
+gauged its prospective Japanese opponents during the 1930s.
+Although the Navy was vaguely aware that the Japanese intended to
+fight a series of attritional battles using cruisers and
+destroyers operating at night, it failed to detect the
+thoroughness of Japanese preparations for that kind of warfare--
+the disastrous battle of Savo Island on the night of August 8-9,
+1942, which cost the Allies four cruisers (the Japanese lost
+none) and a thousand dead, was the result.
+
+To understand an opponent's concept of operations requires
+not merely the perusal of his field manuals (although that is
+clearly important), but a grasp of the philosophy of war that
+animates his approach to battle. It requires as well an
+understanding of the culture of his decisionmaking, which is more
+difficult to come to terms with than his tactical routines;
+indeed, even when one is engaged in battle with an opponent his
+fundamental traits may still be elusive.10 Thus, British and
+American generals comforted themselves during World War II with
+the thought that their German opponents were thorough and
+disciplined, but rigid and schematic in their approach to war.
+In fact, the Germans were a creative foe, who delegated far more
+responsibility to junior officers than did either of the Anglo-
+Saxon armies, and such escapades as the invasion of Russia reveal
+far more haphazard planning (particularly in the logistical area)
+on the part of the military than anyone realized at the time.
+
+If it is dangerous to misgauge an opponent's concept of
+operations initially, it is almost as perilous to think it
+
+15
+
+
+--- Page 19 ---
+static. Such a misreading occurred, to some extent, in Israel in
+the years before the Yom Kippur War of 1973.11 Although the
+general staff of the Israel Defense Forces knew very well indeed
+the order of battle of its Arab opponents, the weaponry they had
+available and their basic plans, they failed to see how their
+enemies' fundamental approach to war had changed, and how old
+characteristics (the steadfastness of peasant soldiers fighting a
+defensive battle, for example) and new operational planning (e.g.
+for a broad frontal assault across the Suez Canal) had created an
+entirely new kind of threat.
+
+Net assessors must consider an opponent's concept of
+operations in two other ways. First, they must look at how it
+interacts with their own organizational routines, preferences,
+and decisionmaking culture. This requires a look at the total
+picture on both sides, which may be rather less reassuring or
+self-flattering than the usual horizontal comparison of
+individual pieces of equipment or small units. For example, in
+the 1970s and 1980s American defense analysts often painted a
+relatively rosy picture of the conventional balance in Europe
+because they believed--correctly, it would appear--that American
+and West German army units were better trained and equipped, man
+for man and battalion for battalion, than their Soviet
+counterparts. This was true, but it was only part of the
+picture; it did not take into account the Soviet concentration on
+the operational level of war, or the measures the Soviets had
+taken to compensate for the relative inefficiency of their
+smaller units. Net assessors must understand that all military
+capabilities are relative: they do not ask whether the enemy is
+efficient, in some general sense, at conducting certain kinds of
+operations, but how he is likely to do against one's own side.
+
+Perhaps most difficult of all in this part of net assessment
+is the attempt to understand how the opponent views the balance--
+the other side's net assessment. Such an understanding of the
+opposing side's view has a number of uses: it may help assess the
+likelihood of war (how does the enemy assess his chances?), of
+peacetime trends (does the enemy think he is behind in certain
+areas into which he will pour resources?), and finally it serves
+as a check on one's own calculations (which may be too rosy or
+too grim). Winston Churchill once remarked, "Always remember,
+however sure you are that you can easily win, that there would
+not be a war if the other man did not think he also had a
+chance." All net assessments are provisional, and one might
+paraphrase Churchill to say that strategic competition would not
+occur if the other side thought its position hopeless; and there
+might not be peace if the other side thought it could win the
+war.
+
+16
+
+
+--- Page 20 ---
+Here is the transcription of the text from the image:
+
+Asymmetries
+
+To do net assessment properly one must focus on the
+fundamental asymmetries between two potential opponents,
+including differences of organizational structure, political
+purpose, and operational objectives. Some of these differences
+are fairly obvious: for example, the United States' Navy's
+interest in sea control during a possible war with the Soviet
+Union has been fundamentally different from the USSR's interest
+in sea denial, which is normally a simpler mission. In the Arab-
+Israeli context, there has always been a fundamental asymmetry
+between the size and economic resources of the two parties to the
+conflict, and this has injected a note of pessimism into Israeli
+strategic calculations since the state was created.
+
+An analysis of asymmetries, however, must go beyond crudely
+obvious differences of political purpose, economic strength, and
+geographical location. In the Arab-Israeli case, for instance,
+it was long assumed that time worked on behalf of the Arab
+coalition opposed to Israel, when this was, in fact, not the
+truth. To be sure, economic growth in countries such as Iraq,
+Syria, and Egypt made them far more formidable competitors with
+Israel, but other pressures operated as well. The longer the
+Arab-Israeli conflict went on, the harder it was for Arab states
+to act in accordance with the often-expressed belief that the
+very existence of Israel was intolerable. Moreover, time had the
+effect of allowing other conflicts (the Iran-Iraq War for
+example) to transform the patterns of foreign policy in ways
+favorable to Israel.
+
+Asymmetries change over time. New generations of weaponry
+may increase or decrease the quality of soldiers required to
+operate them; prevailing modes of war may make particular kinds
+of terrain more or less valuable, greater or lesser obstacles to
+movement. The beginning of wisdom in most conflicts, however, is
+the understanding that the two sides are very different in most
+key respects, a realization captured in Thucydides' Peloponnesian
+War, when the prudent Spartan King Archidamus lectures his
+countrymen about their opponent:
+
+In a struggle with a people who live in a distant land, who
+have also an extraordinary familiarity with the sea, and who
+are in the highest state of preparation in every other
+department; with wealth private and public, with ships, and
+horses, and heavy infantry, and a population such as no one
+other Hellenic place can equal, and lastly a number of
+tributary allies--what can justify us in rashly beginning
+such a struggle? Wherein is our trust that we should rush
+on it unprepared? Is it in our ships? There we are
+inferior; while if we are to practise and become a match for
+them, time must intervene. Is it in our money? There we
+have a far greater deficiency. We neither have it in our
+
+17
+
+
+--- Page 21 ---
+treasury, nor are we ready to contribute it from our private
+funds. Confidence might possibly be felt in our superiority
+in heavy infantry and population, which will enable us to
+invade and devastate their lands. But the Athenians have
+plenty of other land in their empire, and can import what
+they want by sea. Again, if we are to attempt an
+insurrection of their allies, these will have to be
+supported with a fleet, most of them being islanders. What
+then is to be our war?
+
+The question, "What then is to be our war?" emerges from a study
+of asymmetries at many different levels, understanding how
+evanescent those asymmetries might be. At the time of the Munich
+crisis in 1938, for example, the British and French seem not to
+have understood that the Wehrmacht, and in particular the
+Luftwaffe was a far more fragile organization than their own
+armed forces, because of its rapid expansion.12 On the other
+hand, the British campaign in Burma in 1945 revealed a superb
+understanding of the differences between British Imperial and
+Japanese forces, their styles of operation as well as their
+structural composition.13
+
+Scenarios
+
+One of the most common analytical ruts is that of the
+"canonical scenario," the base case which analysts study and
+explore, but whose first assumptions they rarely question. In
+the case of the NATO/Warsaw Pact balance there have been several,
+distinguished by relative mobilization times (with, usually, a
+three-day lag between the two pacts). In the United States
+during the 1930s it was also a mobilization scenario, in which it
+was assumed that the United States would commence full-scale war
+preparedness at a given moment ("M-Day"). Most general staffs,
+although they prepare a variety of contingency plans, have one
+pet scenario for the outbreak of war, a view of the future with
+which they feel most comfortable, and to which they devote most
+of their attention. In 1914 general staffs had (or could have
+had) more choices than they liked to admit, but they too suffered
+from the tyranny of the "canonical scenario." Yet invariably,
+wars never quite fit prewar images of them. Some allies do not
+participate as fully as expected or at all; the enemy has
+unexpected reservoirs of strength (for example, the German use of
+reserve troops to bolster their front line in 1914); the war
+begins with a surprise attack, or in a different geographical
+area than expected.
+
+It is a mistake to think that elaborate prewar planning can
+cover all major scenarios for war--it cannot. But good net
+assessment requires that a range of scenarios be considered.
+Decisionmakers and planning staffs need to understand the variety
+of wartime possibilities that they may encounter--if only to be
+
+18
+
+
+--- Page 22 ---
+resilient enough to cope with an unexpected turn of events. A
+crude form of such thinking was embodied in the American Rainbow
+plans immediately before the US entry into World War II, and the
+exercise was useful given the limited relevance of virtually all
+prewar planning after December 1941.
+
+Multi-scenario analysis, however, will not necessarily come
+easily to analytical staffs, who may be more at home with combat
+modeling and planning than with the political-military
+speculation required to devise interesting cases. Moreover, some
+of the assumptions to drive those scenarios (about the degree of
+surprise suffered, or the cohesiveness of one's own coalition, or
+the effectiveness of one's forces) may be controversial or
+acutely unwelcome to established bureaucracies. Some of the most
+important variables in the real world, however, are precisely
+those. This in turn means that governmental net assessments must
+often be closely held, not only for their classified information
+content, but because of their political and bureaucratic
+sensitivity.
+
+19
+
+
+--- Page 23 ---
+Practical Problems of Net Assessment
+
+Data
+
+An office of net assessment will be not only a voracious
+consumer of data, but a demanding, and sometimes even an
+irritating one. In order to perform its task properly it needs
+access to tightly held information about one's own forces, their
+plans, readiness levels, and capabilities, which can be even
+harder to obtain within the government than information about an
+opponent. One's own armed forces may as a matter of principle be
+quite unhappy about providing such information to a civilian
+agency (as, I shall argue below, an office of net assessment
+should be). They may see it as a competitor in conducting the
+functions of a general staff, or as a potential supplier of
+bureaucratic dynamite to organizational rivals.
+
+Nor will the intelligence community, which generally sees
+itself as providing information services to the rest of the
+government, be all that much happier. The analytical culture of
+net assessment is one of relentless skepticism, and hence such an
+office will be asking questions that intelligence agencies are
+often reluctant to answer, viz., "how do you know?" Moreover,
+like detective Sergeant Joe Friday on the American television
+show Dragnet, net assessors will often be asking for "just the
+facts," and less in the way of interpretation or analysis. And
+some of those requests for information may be of the kind not
+routinely collected or maintained, such as long-term historical
+data normalized for different counting rules or methods of
+collection.
+
+Often, net assessors will seek extremely fine-grained data
+about both their own and the other side. A good example of the
+use to which this can be put is the net assessment of US and
+Soviet tank crews performed by the US Army in cooperation with
+the OSD/Net Assessment in the late 1970s.14 A prolonged and
+careful study revealed some disquieting facts about the relative
+strengths and weaknesses of US and Soviet training. Although
+American troops were three-year volunteers as opposed to the
+Soviets' two-year conscripts, the average Soviet soldier was in
+the same job for eighteen months versus six for the American.
+The former had more frequent gunnery training, more extensive and
+imaginative use of simulators, and better training for mine and
+air warfare than his American counterpart. Thus, meticulous
+research revealed that the simple picture the US Army had had of
+the "otherness of the enemy" was at variance with the facts.
+
+20
+
+
+--- Page 24 ---
+Supporting Studies
+
+It should be noted that not all of the data most useful to
+net assessors is highly classified. Indeed, large amounts may be
+completely overt, and involve the kind of research usefully
+commissioned from outside contractors or academics. A prominent
+example in the American case is work on Soviet operational style
+in war derived from a sifting of the vast overt Soviet literature
+on such matters (the work by Nathan Leites, Chris Donnelly,
+Phillip Petersen, John Hines, and Notra Trulock comes to mind).
+Sometimes such work taps materials neglected by government
+analysts, who may be so overcome by the wealth of information
+collected from secret sources that they fail to probe as
+adequately as they might the unclassified works available on the
+outside.
+
+There are two other cases in which an office of net
+assessment may wish to draw on outside studies. One is for what
+Samuel Huntington has called "policy-relevant basic research,"
+particularly in history. Works such as Ernest May's Knowing
+One's Enemies, a study of European and Japanese threat assessment
+before the world wars, or the three-volume Military Effectiveness
+studies edited by Allan Millett and Williamson Murray, are
+particularly good examples of this kind of work. A second kind
+of work may bear more directly on the problems faced by net
+assessors: issues so murky that one wishes a second opinion, as
+it were, from sources outside the intelligence community. Thus,
+studies of the Soviet economy performed by emigre economists have
+suggested--correctly, it would appear--that it is in far worse
+shape than has been indicated by the computer models used by the
+Central Intelligence Agency. Whereas CIA estimates had suggested
+that the Soviet economy was roughly half that of the American,
+emigre and dissident Soviet economists suggested that the true
+figure was more like a third, or even less.15
+
+The Organizational Design and Bureaucratic Politics of Net
+Assessment
+
+Good net assessment is, by and large, an organizational
+product. While particular assessments require a single
+supervisor, it is very hard to see how a single
+researcher/analyst could produce a useful study completely on his
+or her own. What are the characteristics of a net assessment
+organization? First, it need not be large (say, more than a
+dozen people) because it can tap external sources of analysis.
+And indeed, like most research operations it will be most
+productive if kept small. A mix of civilians and professional
+officers would appear to be useful, and it is best if both have a
+combination of operational experience and academic training in
+various fields. Business degrees, PhDs in philosophy as well as
+
+21
+
+
+--- Page 25 ---
+in electrical engineering--the more diverse the mix the better.
+Intellectual eclecticism is the hallmark of good net assessment.
+
+It is essential that the director (and desirable that his
+deputy) be civilians, for three reasons. First, this ensures
+continuity. In the American military system, at least, it is
+virtually impossible to keep a serving officer in the same
+position for more than two or three years, particularly if he is
+talented and still on the rise. Like an academic institution,
+which it resembles in some (though by no means all) respects, an
+office of net assessment requires a mixture of longevity and
+turnover in its members, and this is rarely possible in a purely
+military environment. Secondly, it is essential that net
+assessment retain a policymaking perspective, and that is
+generally easier for a civilian than an officer, if only because
+officers like to think of themselves as being apolitical
+technical experts. Sound net assessment requires a willingness
+to ask tough political questions, and although there are
+exceptions, most officers do not feel comfortable doing so.
+Thirdly, a civilian director is better suited to shield both such
+an office and (to a lesser extent) its members from the
+pernicious consequences of military hierarchy. This has an
+external dimension--warding off attacks by senior officers
+offended or upset by a particular analysis; and an internal one,
+establishing a free-wheeling atmosphere in which rank is
+immaterial to the basic work.
+
+An office of net assessment must keep a low bureaucratic
+profile. It will handle, obviously, extremely important
+information, gathered from one's opponents as well as one's own
+organizations. But just as importantly, its analyses will always
+have the potential to become weapons in intra-organizational
+struggles for budgets and missions. Thus, the core documents of
+such an office should have extremely restricted distribution,
+that is, they should be funnelled directly to senior defense
+decisionmakers. On the other hand, the key concepts of net
+assessment and the unclassified supporting studies that aid it
+merit wide distribution, in furtherance of improved strategic
+thinking across the board. In the final analysis, however, the
+effectiveness of such an office rests not on its members but on
+decisionmakers. If a Secretary of Defense is more interested in
+day-to-day or budgetary affairs than in mid- and long-term
+strategic planning, the studies produced by such an office will
+have intellectual significance but no other. Although such an
+office should attempt to "sell" its products to senior leaders,
+it is not guaranteed success in so doing.
+
+22
+
+
+--- Page 26 ---
+Future of Net Assessment
+
+The Goldwater-Nichols Department of Defense Reorganization
+Act of 1986 gave responsibility for net assessment, in part, to
+the Joint Staff supporting the Joint Chiefs of Staff. In my view
+this was a mistake, for reasons implicit in the arguments laid
+out above. The military perspective has tended to be short term,
+the military personnel system is unsuited to supporting such
+long-term political-military research, and the inclination of
+most military analysis organizations is, with notable and
+praiseworthy exceptions, toward the formulaic and machine-driven
+study, rather than the sort of work described above. In
+addition, there is a danger that "net assessment" can become a
+buzz word, a slogan to be hurled about in executive-congressional
+debates about the defense budget, which will gradually be drained
+of real meaning.
+
+In the long term, a more serious problem is emerging from
+the developments in world politics and the global distribution of
+politial, economic, and military power. Net assessment was
+difficult even when performed against an opponent as
+intellectually and operationally conservative and stable as the
+Soviet Union. Now, however, net assessment needs to be done in
+new areas of the world, against newly emerging threats. And even
+in performing US-Soviet net assessments, the old verities are no
+longer assured. The cohesion of the Soviet empire has been
+shattered, Soviet society itself is showing enormous strains only
+guessed at a couple of years ago, and Soviet military doctrine is
+in flux. A technological revolution is transforming the nature
+of conventional warfare. Ironically, perhaps, just as the
+American government was beginning to develop a really sound
+understanding of its chief opponent, that opponent began to
+change his nature in profound ways. Indeed, it is conceivable
+that that opponent will self-destruct within a few years.
+
+The battle for sound net assessment has been a struggle, in
+some respects, for intellectual creativity and flexibility in a
+line of work characterized by dogma and dangerous simplification.
+Today, the United States faces a different kind of competition
+with its old opponents, and new kinds of competition with other
+states in different arenas, some political-military, some not.
+In the new order, whatever its final shape, the task of net
+assessment will lie less in beating back the unwarranted
+certainty of over-eager modelers, than in the rendering of
+coherence out of strategic chaos. That will prove an
+intellectual and policymaking problem more difficult and
+complicated than those with which it has been occupied hitherto.
+
+23
+
+
+--- Page 27 ---
+Notes
+
+1
+Marshall's writing on the subject is sparse, but the
+following three papers are of particular interest: "Problems of
+Estimating Military Power," P-3417 (Santa Monica: RAND, 1966); "Α
+Program to Improve Analytic Methods related to Strategic Forces,"
+Policy Sciences, No. 15 (1982); "Arms Competitions: The Status of
+Analysis," in Uwe Nerlich, ed., The Soviet Asset: Military Power
+in the Competition Over Europe (Cambridge: Ballinger, 1983).
+
+2
+See Eliot A. Cohen, "Guessing Game: A Reappraisal of Systems
+Analysis." In Samuel P. Huntington, ed., The Strategic
+Imperative. Cambridge: Ballinger, 1982, pp. 163-191.
+
+3
+See, for example, the papers written by Churchill en route
+to the ARCADIA conference in December 1941, shortly after
+American entry into the war. Warren F. Kimball, ed., Churchill
+and Roosevelt: The Complete Correspondence, Volume I, Alliance
+Emerging (Princeton: Princeton University Press, 1984), pp.
+294-308.
+
+4
+Something like this approach is advocated in James Q.
+Wilson, Bureaucracy: What Government Agencies Do and Why They Do
+It (New York: Basic Books, 1989), ix-xii.
+
+5
+I have been influenced here by a fascinating, unpublished
+paper by James G. Roche and Barry D. Watts, "Choosing Analytic
+Measures," November 18, 1989.
+
+6
+Carl von Clausewitz, On War, Michael Howard and Peter Paret,
+trans., 2nd edition (Princeton: Princeton University Press,
+1982), p. 75. Note that this statement is found in the first
+paragraph of the first chapter of the first book--which indicates
+the importance Clausewitz assigned to this proposition.
+
+7
+See Graham Hall Turbiville, Jr., ed., The Voroshilov
+Lectures: Materials from the Soviet General Staff Academy, Volume
+I (Washington, D.C.: National Defense University Press, 1989),
+pp. 55-92 ("Principles and Content of Military Strategy").
+
+8
+Frank C. Carlucci, Annual Report to the Congress of the
+Secretary of Defense, Fiscal Year 1990 (Washington, D.C.: GPO,
+1989), pp. 13-32.
+
+9
+See Wesley K. Wark, The Ultimate Enemy: British Intelligence
+and Nazi Germany, 1933-1939 (Ithaca: Cornell University Press,
+1985).
+
+24
+
+
+--- Page 28 ---
+10 See Eliot A. Cohen, "Analysis" in Roy Godson, ed.,
+Intelligence Requirements for the 1990s. Washington: National
+Security Information Center, 1989, pp. 71-96.
+
+11 See the discussion in Eliot A. Cohen and John Gooch,
+Military Misfortunes: The Anatomy of Failure in War (New York:
+The Free Press, 1990), pp 95-131.
+
+12 See Williamson Murray, The Change in the European Balance of
+Power, 1938-1939: The Path to Ruin (Princeton: Princeton
+University Press, 1984), pp. 3-49.
+
+13 See the discussion in William J. Slim, Defeat Into Victory
+(1956; London: Macmillan, 1986), passim.
+
+14 "Net Assessment of US and Soviet Tank Crew Training" (Fort
+Monroe, Virginia: US Army Training and Doctrine Command, 1977).
+
+15 These estimates were incorporated into Andrew W. Marshall,
+et al., The Future Security Environment. Report of the Future
+Security Environment Working Group to the Committee on Integrated
+Long-Term Strategy (Washington, D.C.: Department of Defense,
+1988) pp. 6-7, 92-95.
+
+

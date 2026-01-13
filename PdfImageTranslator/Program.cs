@@ -1,7 +1,11 @@
-﻿using System;
+﻿﻿﻿﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Json;
 using System.Text;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using OpenAI;
@@ -20,31 +24,14 @@ class Program
     private const int JpegQuality = 85;
     private const int MaxTokens = 4096;
     private const string OcrPrompt = "請將此圖片中的所有文字完整且準確地轉錄成文字。請逐字轉錄，保持原有的格式和段落結構。";
+    
+    // Gemini Configuration
+    private static readonly HttpClient httpClient = new HttpClient();
 
     static async Task<int> Main(string[] args)
     {
         Console.WriteLine("PDF to Text Converter with OCR Support");
         Console.WriteLine("======================================\n");
-
-        // Parse command line arguments
-        if (args.Length < 1)
-        {
-            Console.WriteLine("Usage: PdfImageTranslator <pdf-file-path> [output-text-file-path]");
-            Console.WriteLine("\nExample:");
-            Console.WriteLine("  PdfImageTranslator input.pdf");
-            Console.WriteLine("  PdfImageTranslator input.pdf output.txt");
-            return 1;
-        }
-
-        string pdfPath = args[0];
-        string outputPath = args.Length > 1 ? args[1] : Path.ChangeExtension(pdfPath, ".txt");
-
-        // Validate input file
-        if (!File.Exists(pdfPath))
-        {
-            Console.WriteLine($"Error: File not found: {pdfPath}");
-            return 1;
-        }
 
         try
         {
@@ -55,26 +42,66 @@ class Program
                 .AddEnvironmentVariables()
                 .Build();
 
-            string? apiKey = configuration["OpenAI:ApiKey"] 
-                ?? Environment.GetEnvironmentVariable("OPENAI_API_KEY");
+            string inputPath = configuration["Settings:InputPath"] ?? "./pdfs";
+            string outputPath = configuration["Settings:OutputPath"] ?? "./output";
+            string aiProvider = configuration["Settings:AiProvider"] ?? "OpenAI";
+            string? pageRange = configuration["Settings:Pages"];
+
+            string? modelId = null;
+            string? apiKey = null;
+            if (aiProvider.Equals("Gemini", StringComparison.OrdinalIgnoreCase))
+            {
+                apiKey = configuration["Gemini:ApiKey"] ?? Environment.GetEnvironmentVariable("GEMINI_API_KEY");
+                modelId = configuration["Gemini:ModelId"] ?? "gemini-1.5-pro";
+            }
+            else
+            {
+                // Default to OpenAI
+                aiProvider = "OpenAI";
+                apiKey = configuration["OpenAI:ApiKey"] ?? Environment.GetEnvironmentVariable("OPENAI_API_KEY");
+            }
 
             if (string.IsNullOrWhiteSpace(apiKey) || apiKey == "YOUR_OPENAI_API_KEY_HERE")
             {
-                Console.WriteLine("Warning: OpenAI API key not configured.");
-                Console.WriteLine("Set it in appsettings.json or OPENAI_API_KEY environment variable.");
+                Console.WriteLine($"Warning: API key for {aiProvider} not configured.");
+                Console.WriteLine($"Set it in appsettings.json or environment variable.");
                 Console.WriteLine("OCR functionality will not be available.\n");
                 apiKey = null;
             }
+            
+            Console.WriteLine($"Using AI Provider: {aiProvider}");
 
-            // Process PDF
-            string extractedText = await ProcessPdfAsync(pdfPath, apiKey);
+            if (!Directory.Exists(inputPath))
+            {
+                Console.WriteLine($"Error: Input directory not found: {inputPath}");
+                return 1;
+            }
 
-            // Write output
-            await File.WriteAllTextAsync(outputPath, extractedText);
+            if (!Directory.Exists(outputPath))
+            {
+                Directory.CreateDirectory(outputPath);
+            }
 
-            Console.WriteLine($"\n✓ Text extracted successfully!");
-            Console.WriteLine($"Output saved to: {outputPath}");
-            Console.WriteLine($"Total characters: {extractedText.Length}");
+            var pdfFiles = Directory.GetFiles(inputPath, "*.pdf", SearchOption.AllDirectories);
+            Console.WriteLine($"Found {pdfFiles.Length} PDF files in '{inputPath}'\n");
+
+            foreach (var pdfPath in pdfFiles)
+            {
+                try
+                {
+                    string extractedText = await ProcessPdfAsync(pdfPath, apiKey, aiProvider, modelId, pageRange);
+                    string outputFilePath = Path.Combine(outputPath, Path.ChangeExtension(Path.GetFileName(pdfPath), ".txt"));
+                    await File.WriteAllTextAsync(outputFilePath, extractedText);
+                    Console.WriteLine($"Saved to: {outputFilePath}");
+                    Console.WriteLine("--------------------------------------------------\n");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error processing {Path.GetFileName(pdfPath)}: {ex.Message}\n");
+                }
+            }
+            
+            Console.WriteLine("Batch processing completed.");
 
             return 0;
         }
@@ -86,7 +113,7 @@ class Program
         }
     }
 
-    static async Task<string> ProcessPdfAsync(string pdfPath, string? apiKey)
+    static async Task<string> ProcessPdfAsync(string pdfPath, string? apiKey, string aiProvider, string? modelId, string? pageRange = null)
     {
         Console.WriteLine($"Processing PDF: {pdfPath}\n");
 
@@ -95,6 +122,34 @@ class Program
         int textPagesCount = 0;
         int imagePagesCount = 0;
 
+        Func<int, bool> shouldProcessPage = _ => true;
+        if (!string.IsNullOrWhiteSpace(pageRange))
+        {
+            var pagesToProcess = new HashSet<int>();
+            var parts = pageRange.Split(',', StringSplitOptions.RemoveEmptyEntries);
+            foreach (var part in parts)
+            {
+                var trimmed = part.Trim();
+                if (trimmed.Contains('-'))
+                {
+                    var rangeParts = trimmed.Split('-');
+                    if (rangeParts.Length == 2 && int.TryParse(rangeParts[0], out int start) && int.TryParse(rangeParts[1], out int end))
+                    {
+                        for (int p = start; p <= end; p++) pagesToProcess.Add(p);
+                    }
+                }
+                else
+                {
+                    if (int.TryParse(trimmed, out int pageNum))
+                    {
+                        pagesToProcess.Add(pageNum);
+                    }
+                }
+            }
+            shouldProcessPage = p => pagesToProcess.Contains(p);
+            Console.WriteLine($"Processing specific pages: {pageRange}");
+        }
+
         using (var document = PdfDocument.Open(pdfPath))
         {
             pageCount = document.NumberOfPages;
@@ -102,6 +157,8 @@ class Program
 
             for (int i = 1; i <= pageCount; i++)
             {
+                if (!shouldProcessPage(i)) continue;
+
                 Console.Write($"Processing page {i}/{pageCount}... ");
 
                 Page page = document.GetPage(i);
@@ -131,7 +188,7 @@ class Program
                     {
                         try
                         {
-                            string ocrText = await ExtractTextFromImagePageAsync(pdfPath, i, apiKey);
+                            string ocrText = await ExtractTextFromImagePageAsync(pdfPath, page, apiKey, aiProvider, modelId);
                             result.AppendLine($"--- Page {i} ---");
                             result.AppendLine(ocrText);
                             result.AppendLine();
@@ -158,37 +215,121 @@ class Program
         return result.ToString();
     }
 
-    static async Task<string> ExtractTextFromImagePageAsync(string pdfPath, int pageNumber, string apiKey)
+    static async Task<string> ExtractTextFromImagePageAsync(string pdfPath, Page page, string apiKey, string aiProvider, string? modelId)
     {
-        // Render PDF page to image
-        using var pageImage = PDFtoImage.Conversion.ToImage(pdfPath, page: pageNumber - 1); // 0-based index
-        
-        // Convert SkiaSharp bitmap to base64
-        using var image = SKImage.FromBitmap(pageImage);
-        using var data = image.Encode(SKEncodedImageFormat.Jpeg, JpegQuality);
-        byte[] imageBytes = data.ToArray();
-        string base64Image = Convert.ToBase64String(imageBytes);
+        byte[]? imageBytes = null;
+        string imageMediaType = "image/jpeg";
 
-        // Call OpenAI Vision API
-        var client = new OpenAIClient(apiKey);
-        var chatClient = client.GetChatClient("gpt-4o");
-
-        var messages = new ChatMessage[]
+        // 1. 嘗試直接從 PDF 結構中提取嵌入的圖片 (Optimization)
+        // 如果頁面只包含一張圖片(常見於掃描檔)，直接提取可避免重新渲染與壓縮的失真
+        try
         {
-            new UserChatMessage(
-                ChatMessageContentPart.CreateTextPart(OcrPrompt),
-                ChatMessageContentPart.CreateImagePart(new Uri($"data:image/jpeg;base64,{base64Image}"))
-            )
-        };
-
-        var completionOptions = new ChatCompletionOptions
+            var images = page.GetImages().ToList();
+            if (images.Count == 1 && images[0].TryGetPng(out byte[] pngBytes))
+            {
+                imageBytes = pngBytes;
+                imageMediaType = "image/png";
+                // Console.WriteLine($"[Debug] Extracted embedded image directly (Page {page.Number})");
+            }
+        }
+        catch
         {
-            MaxOutputTokenCount = MaxTokens,
-            Temperature = 0.0f
-        };
+            // 若提取失敗，忽略錯誤並進入下方的渲染流程
+        }
 
-        var response = await chatClient.CompleteChatAsync(messages, completionOptions);
+        // 2. 若無法直接提取，則使用 PDFtoImage 渲染整頁 (Fallback)
+        if (imageBytes == null)
+        {
+            try
+            {
+                // Render PDF page to image (PDFtoImage uses 0-based index)
+                using var pageImage = PDFtoImage.Conversion.ToImage(pdfPath, page: page.Number - 1);
+                
+                // Convert SkiaSharp bitmap to bytes
+                using var image = SKImage.FromBitmap(pageImage);
+                using var data = image.Encode(SKEncodedImageFormat.Jpeg, JpegQuality);
+                imageBytes = data.ToArray();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[Image Conversion Error] Page {page.Number}: {ex}");
+                return $"轉換 Image 失敗: {ex.Message}";
+            }
+        }
 
-        return response.Value.Content[0].Text;
+        if (aiProvider.Equals("Gemini", StringComparison.OrdinalIgnoreCase))
+        {
+            // Call Gemini API (REST)
+            var url = $"https://generativelanguage.googleapis.com/v1beta/models/{modelId}:generateContent?key={apiKey}";
+            
+            var requestBody = new
+            {
+                contents = new[]
+                {
+                    new
+                    {
+                        parts = new object[]
+                        {
+                            new { text = OcrPrompt },
+                            new
+                            {
+                                inline_data = new
+                                {
+                                    mime_type = imageMediaType,
+                                    data = Convert.ToBase64String(imageBytes!)
+                                }
+                            }
+                        }
+                    }
+                },
+                generationConfig = new
+                {
+                    maxOutputTokens = MaxTokens,
+                    temperature = 0.0
+                },
+                safetySettings = new[]
+                {
+                    new { category = "HARM_CATEGORY_HARASSMENT", threshold = "BLOCK_NONE" },
+                    new { category = "HARM_CATEGORY_HATE_SPEECH", threshold = "BLOCK_NONE" },
+                    new { category = "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold = "BLOCK_NONE" },
+                    new { category = "HARM_CATEGORY_DANGEROUS_CONTENT", threshold = "BLOCK_NONE" }
+                }
+            };
+
+            var jsonPayload = System.Text.Json.JsonSerializer.Serialize(requestBody);
+            var content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
+
+            var response = await httpClient.PostAsync(url, content);
+            response.EnsureSuccessStatusCode();
+
+            var jsonResponse = await response.Content.ReadFromJsonAsync<JsonObject>();
+            var text = jsonResponse?["candidates"]?[0]?["content"]?["parts"]?[0]?["text"]?.ToString();
+
+            return text ?? "[Gemini returned no text]";
+        }
+        else
+        {
+            // Call OpenAI Vision API
+            var client = new OpenAIClient(apiKey);
+            var chatClient = client.GetChatClient("gpt-4o");
+
+            var messages = new ChatMessage[]
+            {
+                new UserChatMessage(
+                    ChatMessageContentPart.CreateTextPart(OcrPrompt),
+                    ChatMessageContentPart.CreateImagePart(BinaryData.FromBytes(imageBytes), imageMediaType)
+                )
+            };
+
+            var completionOptions = new ChatCompletionOptions
+            {
+                MaxOutputTokenCount = MaxTokens,
+                Temperature = 0.0f
+            };
+
+            var response = await chatClient.CompleteChatAsync(messages, completionOptions);
+
+            return response.Value.Content[0].Text;
+        }
     }
 }

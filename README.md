@@ -1,15 +1,15 @@
 # PdfImageTranslator
 
-C# Console App，將 PDF 轉為純文字；若 PDF 為掃描影像型（無可用文字層），則將每頁渲染成影像後呼叫 OpenAI 視覺模型逐字轉錄成文字，再按頁序合併輸出。
+C# Console App，支援批次將目錄下的 PDF 轉為純文字；若 PDF 為掃描影像型（無可用文字層），則將每頁渲染成影像後呼叫 OpenAI 視覺模型逐字轉錄成文字，再按頁序合併輸出。
 
-A C# Console Application that converts PDF files to plain text. For scanned image-based PDFs (without text layer), it renders each page as an image and uses OpenAI's Vision model to transcribe the content into text, then merges the output in page order.
+A C# Console Application that batch converts PDF files from a directory to plain text. For scanned image-based PDFs (without text layer), it renders each page as an image and uses OpenAI's Vision model to transcribe the content into text, then merges the output in page order.
 
 ## Features
 
 - **Text-based PDF**: Extracts text directly from PDFs with text layers
 - **Image-based PDF (OCR)**: Renders pages as images and uses OpenAI's GPT-4 Vision model for OCR
 - **Hybrid PDFs**: Automatically detects and processes both text and image pages accordingly
-- **Command-line interface**: Simple and easy to use
+- **Batch Processing**: Processes all PDFs in a specified input directory
 - **Configurable**: API key can be set via configuration file or environment variable
 
 ## Prerequisites
@@ -36,6 +36,10 @@ Edit `appsettings.json` and add your OpenAI API key:
 {
   "OpenAI": {
     "ApiKey": "your-api-key-here"
+  },
+  "Settings": {
+    "InputPath": "./pdfs",
+    "OutputPath": "./output"
   }
 }
 ```
