@@ -20,10 +20,39 @@ namespace PdfImageTranslator;
 class Program
 {
     // Configuration constants
-    private const int MinTextLengthThreshold = 50;
+    private const int MinTextLengthThreshold = 10;
     private const int JpegQuality = 85;
     private const int MaxTokens = 4096;
-    private const string OcrPrompt = "請將此圖片中的所有文字完整且準確地轉錄成文字。請逐字轉錄，保持原有的格式和段落結構。";
+    private const float ImageScaleFactor = 2.0f; // 圖片放大倍數
+    private const string OcrPrompt = @"Please transcribe all text from this image and provide a bilingual (English-Chinese) output.
+
+Instructions:
+1. The document is written in English. First, accurately recognize and correct any OCR errors caused by image distortion, such as:
+   - 'rn' misread as 'm', or 'm' misread as 'rn'
+   - '0' (zero) confused with 'O' (letter O)
+   - '1' (one) confused with 'l' (lowercase L) or 'I' (uppercase i)
+   - 'cl' misread as 'd', or 'd' misread as 'cl'
+   - Missing or extra spaces between words
+   - Broken words due to line wrapping
+2. After recognition, translate the text paragraph by paragraph into Traditional Chinese (繁體中文).
+3. Preserve the original paragraph structure.
+4. Output in Markdown format with the following bilingual structure:
+   - First, output all the recognized English text under the heading '## English'
+   - Then, output the translated Traditional Chinese text under the heading '## 繁體中文'
+5. Both sections should maintain the same paragraph structure for easy comparison.";
+
+    private const string TranslatePrompt = @"Please translate the following English text into Traditional Chinese and provide a bilingual (English-Chinese) output.
+
+Instructions:
+1. Translate the text paragraph by paragraph into Traditional Chinese (繁體中文).
+2. Preserve the original paragraph structure.
+3. Output in Markdown format with the following bilingual structure:
+   - First, output the original English text under the heading '## English'
+   - Then, output the translated Traditional Chinese text under the heading '## 繁體中文'
+4. Both sections should maintain the same paragraph structure for easy comparison.
+
+Here is the text to translate:
+";
     
     // Gemini Configuration
     private static readonly HttpClient httpClient = new HttpClient();
@@ -42,8 +71,8 @@ class Program
                 .AddEnvironmentVariables()
                 .Build();
 
-            string inputPath = configuration["Settings:InputPath"] ?? "./pdfs";
-            string outputPath = configuration["Settings:OutputPath"] ?? "./output";
+            string inputPath = configuration["Settings:InputPath"] ?? "./p1dfs";
+            string outputPath = configuration["Settings:OutputPath"] ?? "./o2utput";
             string aiProvider = configuration["Settings:AiProvider"] ?? "OpenAI";
             string? pageRange = configuration["Settings:Pages"];
 
@@ -51,17 +80,17 @@ class Program
             string? apiKey = null;
             if (aiProvider.Equals("Gemini", StringComparison.OrdinalIgnoreCase))
             {
-                apiKey = configuration["Gemini:ApiKey"] ?? Environment.GetEnvironmentVariable("GEMINI_API_KEY");
+                apiKey = Environment.GetEnvironmentVariable("GEMINI_API_KEY") ?? configuration["Gemini:ApiKey"];
                 modelId = configuration["Gemini:ModelId"] ?? "gemini-1.5-pro";
             }
             else
             {
                 // Default to OpenAI
                 aiProvider = "OpenAI";
-                apiKey = configuration["OpenAI:ApiKey"] ?? Environment.GetEnvironmentVariable("OPENAI_API_KEY");
+                apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY") ?? configuration["OpenAI:ApiKey"];
             }
 
-            if (string.IsNullOrWhiteSpace(apiKey) || apiKey == "YOUR_OPENAI_API_KEY_HERE")
+            if (string.IsNullOrWhiteSpace(apiKey) || apiKey == "YOUR_OPENAI_API_KEY_HERE" || apiKey == "YOUR_GEMINI_API_KEY_HERE")
             {
                 Console.WriteLine($"Warning: API key for {aiProvider} not configured.");
                 Console.WriteLine($"Set it in appsettings.json or environment variable.");
@@ -90,7 +119,7 @@ class Program
                 try
                 {
                     string extractedText = await ProcessPdfAsync(pdfPath, apiKey, aiProvider, modelId, pageRange);
-                    string outputFilePath = Path.Combine(outputPath, Path.ChangeExtension(Path.GetFileName(pdfPath), ".txt"));
+                    string outputFilePath = Path.Combine(outputPath, Path.ChangeExtension(Path.GetFileName(pdfPath), ".md"));
                     await File.WriteAllTextAsync(outputFilePath, extractedText);
                     Console.WriteLine($"Saved to: {outputFilePath}");
                     Console.WriteLine("--------------------------------------------------\n");
@@ -167,12 +196,34 @@ class Program
                 // Check if page has extractable text
                 if (!string.IsNullOrWhiteSpace(pageText) && pageText.Length > MinTextLengthThreshold)
                 {
-                    // Page has text layer, extract directly
-                    result.AppendLine($"--- Page {i} ---");
-                    result.AppendLine(pageText);
-                    result.AppendLine();
-                    textPagesCount++;
-                    Console.WriteLine("✓ Text extracted");
+                    // Page has text layer, translate the text
+                    if (apiKey == null)
+                    {
+                        result.AppendLine($"--- Page {i} ---");
+                        result.AppendLine(pageText);
+                        result.AppendLine();
+                        Console.WriteLine("✓ Text extracted (no translation - API key not available)");
+                    }
+                    else
+                    {
+                        try
+                        {
+                            string translatedText = await TranslateTextAsync(pageText, apiKey, aiProvider, modelId);
+                            result.AppendLine($"--- Page {i} ---");
+                            result.AppendLine(translatedText);
+                            result.AppendLine();
+                            textPagesCount++;
+                            Console.WriteLine("✓ Text translated");
+                        }
+                        catch (Exception ex)
+                        {
+                            result.AppendLine($"--- Page {i} ---");
+                            result.AppendLine(pageText);
+                            result.AppendLine($"[Translation Error: {ex.Message}]");
+                            result.AppendLine();
+                            Console.WriteLine($"✗ Translation failed: {ex.Message}");
+                        }
+                    }
                 }
                 else
                 {
@@ -227,9 +278,14 @@ class Program
             var images = page.GetImages().ToList();
             if (images.Count == 1 && images[0].TryGetPng(out byte[] pngBytes))
             {
-                imageBytes = pngBytes;
+                // 將提取的 PNG 圖片放大兩倍以提高 OCR 辨識率
+                using var originalBitmap = SKBitmap.Decode(pngBytes);
+                using var scaledBitmap = ScaleImage(originalBitmap, ImageScaleFactor);
+                using var scaledImage = SKImage.FromBitmap(scaledBitmap);
+                using var scaledData = scaledImage.Encode(SKEncodedImageFormat.Png, 100);
+                imageBytes = scaledData.ToArray();
                 imageMediaType = "image/png";
-                // Console.WriteLine($"[Debug] Extracted embedded image directly (Page {page.Number})");
+                // Console.WriteLine($"[Debug] Extracted and scaled embedded image (Page {page.Number}, {originalBitmap.Width}x{originalBitmap.Height} -> {scaledBitmap.Width}x{scaledBitmap.Height})");
             }
         }
         catch
@@ -331,5 +387,96 @@ class Program
 
             return response.Value.Content[0].Text;
         }
+    }
+
+    static async Task<string> TranslateTextAsync(string text, string apiKey, string aiProvider, string? modelId)
+    {
+        string prompt = TranslatePrompt + text;
+
+        if (aiProvider.Equals("Gemini", StringComparison.OrdinalIgnoreCase))
+        {
+            // Call Gemini API (REST)
+            var url = $"https://generativelanguage.googleapis.com/v1beta/models/{modelId}:generateContent?key={apiKey}";
+            
+            var requestBody = new
+            {
+                contents = new[]
+                {
+                    new
+                    {
+                        parts = new object[]
+                        {
+                            new { text = prompt }
+                        }
+                    }
+                },
+                generationConfig = new
+                {
+                    maxOutputTokens = MaxTokens,
+                    temperature = 0.0
+                },
+                safetySettings = new[]
+                {
+                    new { category = "HARM_CATEGORY_HARASSMENT", threshold = "BLOCK_NONE" },
+                    new { category = "HARM_CATEGORY_HATE_SPEECH", threshold = "BLOCK_NONE" },
+                    new { category = "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold = "BLOCK_NONE" },
+                    new { category = "HARM_CATEGORY_DANGEROUS_CONTENT", threshold = "BLOCK_NONE" }
+                }
+            };
+
+            var jsonPayload = System.Text.Json.JsonSerializer.Serialize(requestBody);
+            var content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
+
+            var response = await httpClient.PostAsync(url, content);
+            response.EnsureSuccessStatusCode();
+
+            var jsonResponse = await response.Content.ReadFromJsonAsync<JsonObject>();
+            var resultText = jsonResponse?["candidates"]?[0]?["content"]?["parts"]?[0]?["text"]?.ToString();
+
+            return resultText ?? "[Gemini returned no text]";
+        }
+        else
+        {
+            // Call OpenAI API
+            var client = new OpenAIClient(apiKey);
+            var chatClient = client.GetChatClient("gpt-4o");
+
+            var messages = new ChatMessage[]
+            {
+                new UserChatMessage(ChatMessageContentPart.CreateTextPart(prompt))
+            };
+
+            var completionOptions = new ChatCompletionOptions
+            {
+                MaxOutputTokenCount = MaxTokens,
+                Temperature = 0.0f
+            };
+
+            var response = await chatClient.CompleteChatAsync(messages, completionOptions);
+
+            return response.Value.Content[0].Text;
+        }
+    }
+
+    /// <summary>
+    /// 將圖片依指定倍數放大，以提高 OCR 辨識率
+    /// </summary>
+    /// <param name="original">原始圖片</param>
+    /// <param name="scaleFactor">放大倍數</param>
+    /// <returns>放大後的圖片</returns>
+    static SKBitmap ScaleImage(SKBitmap original, float scaleFactor)
+    {
+        int newWidth = (int)(original.Width * scaleFactor);
+        int newHeight = (int)(original.Height * scaleFactor);
+        
+        var scaledBitmap = new SKBitmap(newWidth, newHeight);
+        using var canvas = new SKCanvas(scaledBitmap);
+        
+        // 使用高品質的縮放演算法 (Cubic for upscaling)
+        var samplingOptions = new SKSamplingOptions(SKCubicResampler.Mitchell);
+        
+        canvas.DrawImage(SKImage.FromBitmap(original), new SKRect(0, 0, newWidth, newHeight), samplingOptions);
+        
+        return scaledBitmap;
     }
 }
